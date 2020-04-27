@@ -1,0 +1,2 @@
+*/10 * * * * date >> ~/Development/speedtest/raw/speeds.json; ~/.pyenv/versions/deleteme-3.7.0/bin/speedtest --single --secure --json >> ~/Development/speedtest/raw/speeds.json; echo "\n" >> ~/Development/speedtest/raw/speeds.json
+* * * * * /usr/bin/python ~/Development/speedtest/calculate-speed-statistics.py
