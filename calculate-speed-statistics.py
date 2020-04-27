@@ -46,10 +46,14 @@ def find_all_breaches(measurements):
     for date, (download, upload) in measurements.items():
         if download < 50 and upload < 7:
             breaches.append(
-                "{}: Breach with download at {}Mbit/s and upload at {}Mbit/s".format(date, download, upload)
+                "{}: Breach with download at {}Mbit/s and upload at {}Mbit/s".format(
+                    date, download, upload
+                )
             )
         elif download < 50:
-            breaches.append("{}: Breach with download at {}Mbit/s".format(date, download))
+            breaches.append(
+                "{}: Breach with download at {}Mbit/s".format(date, download)
+            )
         elif upload < 7:
             breaches.append("{}: Breach with upload at {}Mbit/s".format(date, upload))
 
