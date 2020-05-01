@@ -14,10 +14,10 @@ def read_raw_speeds():
     measurements = {}
     key = None
     for i, l in enumerate(lines):
-        if i % 4 == 0:
+        if i % 2== 0:
             # It's a date
             key = l
-        if i % 4 == 1:
+        if i % 2 == 1:
             # It's an entry
             d = json.loads(l)
             download = float("%.5g" % (d["download"] / 10 ** 6))
